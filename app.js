@@ -3,8 +3,6 @@ import "dotenv/config";
 import router from "./routes/routes.js";
 import { join } from "path";
 import connectDb from "./db/connect.js";
-import bodyParser from 'body-parser'
-import mongoose from "mongoose";
 
 const app = express();
 const port = process.env.PORT || 5000;

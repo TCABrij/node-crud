@@ -10,8 +10,9 @@ const deleteUser = async (req, res) => {
   // Delete user if Valid and response
   if (isValidUser) {
     deleteFromDb({_id: request_id}) // takes condition object
+    console.log(`user: ${request_id} deleted from Database`);
     res.render("success", { message: "User Deleted Successfully" });
-  } else res.render("success", { message: "User Not Found 🤷‍♂️" });
+  } else res.render("success", { message: "Invalid Request or User Not Found 🤷‍♂️" });
 };
 
 export default deleteUser;

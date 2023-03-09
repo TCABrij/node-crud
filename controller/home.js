@@ -1,4 +1,4 @@
-import getUsers from "./getUsers.js"
+import getUsers from "../db/getUsers.js"
 
 const homeController = async (req, res) => {
 
