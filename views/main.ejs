@@ -29,12 +29,20 @@
             <tbody>
                 <% users.map((user, index)=> { %>
                     <tr>
-                        <td> <%= index+1 %> </td>
-                        <td> <%= user.name %> </td>
-                        <td><%= user.email %></td>
-                        <td> <%= user.city %> </td>
+                        <td>
+                            <%= index+1 %>
+                        </td>
+                        <td>
+                            <%= user.name %>
+                        </td>
+                        <td> 
+                            <%= user.email %>
+                        </td>
+                        <td>
+                            <%= user.city %>
+                        </td>
                         <td class="actions">
-                            <span class="fa fa-edit"></span>
+                            <span class="fa fa-edit" data-id="<%= user.id%>" data-name="<%= user.name %>" data-email="<%= user.email %>" data-city="<%= user.city %>"></span>
                             <a href="/delete?<%= user.id %>" target="_self">
                                 <span class="fa fa-trash"></span>
                             </a>
@@ -45,3 +53,6 @@
         </table>
     </div>
 </div>
+
+ <!-- Modal window  -->
+ <%- include('./modal') %>
